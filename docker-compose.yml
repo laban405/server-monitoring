@@ -14,8 +14,7 @@ services:
       - 9090:9090
     volumes:
       - prometheus-storage:/prometheus
-    command:
-      - '--config.file=/prometheus/prometheus.yml'
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     restart: always
 
   node-exporter:
